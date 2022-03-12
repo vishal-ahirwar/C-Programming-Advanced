@@ -59,9 +59,3 @@ int Binary2Decimals(long long int bin)
     return dec;
 };
 
-// int main(void)
-// {
-//     printf("\n1001 : %d\n", Binary2Decimals(1001));
-//     printf("\n9 : binary = %lld\n", Decimals2Binary(9));
-//     return 0;
-// };

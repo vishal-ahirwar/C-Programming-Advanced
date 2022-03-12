@@ -7,6 +7,7 @@
  * gcc example.o main.c -o main
  * no need to put your headerfile here
  * that's it
+ * 12.03.2022
  ***/
 
 #include "example.h"

@@ -1,3 +1,4 @@
 .vscode
 hello_world
 *.o
+*main
