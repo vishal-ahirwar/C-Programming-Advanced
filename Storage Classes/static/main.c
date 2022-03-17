@@ -18,7 +18,7 @@ static void prnt(const int val)
 {
     printf("%d\n",val);
 };
-
+extern callFunction();
 int main(void)
 {
     callFunction();
