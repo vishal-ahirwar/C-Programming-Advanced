@@ -1,4 +1,4 @@
-//Copyright(c) 2022 Vishal Ahirwar.
+// Copyright(c) 2022 Vishal Ahirwar.
 
 #include <stdio.h>
 int main(void)
@@ -9,7 +9,7 @@ int main(void)
     unsigned int input = 1;
     while (input != 0)
     {
-        printf("\r\n\n----------------------\nMENU:\n1.set bit\n2.unset bit\n3.check bit set or not\n0.Quit\n----------------------\n\n");
+        printf("\r\n\n----------------------\nMENU:\n1.set bit\n2.unset bit\n3.check bit set or not\n0.Quit\nCopyright(c)2022 vishal Ahirwar.All rights reservd.\n----------------------\n\n");
         scanf("%ud", &input);
 
         switch (input)
