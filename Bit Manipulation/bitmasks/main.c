@@ -1,11 +1,10 @@
-// used to set/unset or check bit state
+//Copyright(c)2022 Vishal Ahirwar. All rights reserved.
 #include <stdio.h>
 #define OFF 0
 #define ON 1
 int main(void)
 {
     int DRONES_Propeller_STATE = OFF;
-
     // enable 1rst head left Propeller
     int mask = 0b0000000000000001;
     DRONES_Propeller_STATE = DRONES_Propeller_STATE | mask;
