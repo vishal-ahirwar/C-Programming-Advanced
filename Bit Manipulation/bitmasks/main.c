@@ -1,7 +1,9 @@
-// used to set/unset or check bit state
+//Copyright(c) 2022 Vishal Ahirwar. All rights reserved.
+
 #include <stdio.h>
 #define OFF 0
 #define ON 1
+// used to set/unset or check bit state
 int main(void)
 {
     int DRONES_Propeller_STATE = OFF;
