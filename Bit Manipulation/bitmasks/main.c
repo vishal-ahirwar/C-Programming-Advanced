@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 //Copyright(c)2022 Vishal Ahirwar. All rights reserved.
+=======
+//Copyright(c) 2022 Vishal Ahirwar. All rights reserved.
+
+>>>>>>> 4665f495d77ff8574e3c4172f61a6aa58931ce04
 #include <stdio.h>
 #define OFF 0
 #define ON 1
+// used to set/unset or check bit state
 int main(void)
 {
     int DRONES_Propeller_STATE = OFF;
