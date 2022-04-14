@@ -28,6 +28,9 @@ int main(void)
     Point OBJ1 = {.X = 12, .Y = 13};
     print(&OBJ1);
 
+    Point ob= {X:12,Y:56};
+    print(&ob);
+    
     Point OBJ2 = {X : 120, Y : 3450};
     print(&OBJ2);
 
