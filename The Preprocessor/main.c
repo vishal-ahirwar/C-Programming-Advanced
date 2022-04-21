@@ -47,6 +47,10 @@ void Action_paste(const char *str)
 int main(void)
 {
     Call(call, ERROR);
+
+    int i;
+    int j;
+
     Call(copy, ERROR);
     Call(paste, WARNING);
     Call(cut, WARNING);
