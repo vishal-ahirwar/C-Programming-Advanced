@@ -3,7 +3,11 @@
 .Ltext0:
 	.section	.rodata
 .LC0:
+	.string	"\nstarting ...\n"
+.LC1:
 	.string	"%d\n"
+.LC2:
+	.string	"%d\nshutting down ...\n"
 	.text
 	.globl	main
 	.type	main, @function
@@ -19,75 +23,78 @@ main:
 	movq	%rsp, %rbp
 	.cfi_def_cfa_register 6
 	subq	$16, %rsp
-	.loc 1 8 11
+	.loc 1 8 5
+	leaq	.LC0(%rip), %rdi
+	call	puts@PLT
+	.loc 1 9 11
 	movq	$0, -8(%rbp)
-	.loc 1 9 12
+	.loc 1 10 12
 	movq	add@GOTPCREL(%rip), %rax
 	movq	%rax, -8(%rbp)
-	.loc 1 10 9
+	.loc 1 11 9
 	movq	-8(%rbp), %rax
 	movl	$5, %esi
 	movl	$5, %edi
 	call	*%rax
 .LVL0:
 	movl	%eax, -12(%rbp)
-	.loc 1 11 5
+	.loc 1 12 5
 	movl	-12(%rbp), %eax
 	movl	%eax, %esi
-	leaq	.LC0(%rip), %rdi
+	leaq	.LC1(%rip), %rdi
 	movl	$0, %eax
 	call	printf@PLT
-	.loc 1 12 12
+	.loc 1 13 12
 	movq	sub@GOTPCREL(%rip), %rax
 	movq	%rax, -8(%rbp)
-	.loc 1 13 9
+	.loc 1 14 9
 	movq	-8(%rbp), %rax
 	movl	$5, %esi
 	movl	$5, %edi
 	call	*%rax
 .LVL1:
 	movl	%eax, -12(%rbp)
-	.loc 1 14 5
+	.loc 1 15 5
 	movl	-12(%rbp), %eax
 	movl	%eax, %esi
-	leaq	.LC0(%rip), %rdi
+	leaq	.LC1(%rip), %rdi
 	movl	$0, %eax
 	call	printf@PLT
-	.loc 1 15 12
+	.loc 1 16 12
 	movq	multi@GOTPCREL(%rip), %rax
 	movq	%rax, -8(%rbp)
-	.loc 1 16 9
+	.loc 1 17 9
 	movq	-8(%rbp), %rax
 	movl	$5, %esi
 	movl	$5, %edi
 	call	*%rax
 .LVL2:
 	movl	%eax, -12(%rbp)
-	.loc 1 17 5
+	.loc 1 18 5
 	movl	-12(%rbp), %eax
 	movl	%eax, %esi
-	leaq	.LC0(%rip), %rdi
+	leaq	.LC1(%rip), %rdi
 	movl	$0, %eax
 	call	printf@PLT
-	.loc 1 18 12
+	.loc 1 19 12
 	movq	div@GOTPCREL(%rip), %rax
 	movq	%rax, -8(%rbp)
-	.loc 1 19 9
+	.loc 1 20 9
 	movq	-8(%rbp), %rax
 	movl	$5, %esi
 	movl	$5, %edi
 	call	*%rax
 .LVL3:
 	movl	%eax, -12(%rbp)
-	.loc 1 20 5
+	.loc 1 21 5
 	movl	-12(%rbp), %eax
 	movl	%eax, %esi
-	leaq	.LC0(%rip), %rdi
+	leaq	.LC2(%rip), %rdi
 	movl	$0, %eax
 	call	printf@PLT
-	.loc 1 21 12
+	.loc 1 22 12
 	movl	$0, %eax
-	.loc 1 22 1
+	.loc 1 23 1
 	leave
 	.cfi_def_cfa 7, 8
 	ret
@@ -628,7 +635,7 @@ main:
 	.uleb128 0x18
 	.long	.LASF58
 	.byte	0x1
-	.byte	0x8
+	.byte	0x9
 	.byte	0xb
 	.long	0x446
 	.uleb128 0x2

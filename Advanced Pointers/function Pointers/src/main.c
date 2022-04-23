@@ -5,6 +5,7 @@
 int main(void)
 {
     int x;
+    printf("\nstarting ...\n\n");
     int (*action)(const int, const int) = NULL;
     action = add;
     x = action(5, 5);
@@ -17,6 +18,6 @@ int main(void)
     printf("%d\n", x);
     action = div;
     x = action(5, 5);
-    printf("%d\n", x);
+    printf("%d\nshutting down ...\n", x);
     return 0;
 }

@@ -862,10 +862,11 @@ extern void (*volatile __after_morecore_hook) (void);
 int main(void)
 {
     int x;
+    printf("\nstarting ...\n\n");
     int (*action)(const int, const int) = 
-# 8 "main.c" 3 4
+# 9 "main.c" 3 4
                                          ((void *)0)
-# 8 "main.c"
+# 9 "main.c"
                                              ;
     action = add;
     x = action(5, 5);
@@ -878,6 +879,6 @@ int main(void)
     printf("%d\n", x);
     action = div;
     x = action(5, 5);
-    printf("%d\n", x);
+    printf("%d\nshutting down ...\n", x);
     return 0;
 }
