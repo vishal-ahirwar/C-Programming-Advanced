@@ -1,11 +1,11 @@
-# 1 "main.c"
+# 1 "../../../static__libararies/src/my_math.c"
 # 1 "/media/vi/C(Low Level)/C Programming Advanced/Advanced Pointers/function Pointers/src//"
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 31 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 32 "<command-line>" 2
-# 1 "main.c"
+# 1 "../../../static__libararies/src/my_math.c"
 # 1 "../../../static__libararies/src/my_math.h" 1
 
 
@@ -733,151 +733,20 @@ int add(const int a, const int b);
 int sub(const int a, const int b);
 int div(const int a, const int b);
 int multi(const int a, const int b);
-# 2 "main.c" 2
-
-# 1 "/usr/include/malloc.h" 1 3 4
-# 23 "/usr/include/malloc.h" 3 4
-# 1 "/usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h" 1 3 4
-# 143 "/usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h" 3 4
-
-# 143 "/usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h" 3 4
-typedef long int ptrdiff_t;
-# 321 "/usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h" 3 4
-typedef int wchar_t;
-# 415 "/usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h" 3 4
-typedef struct {
-  long long __max_align_ll __attribute__((__aligned__(__alignof__(long long))));
-  long double __max_align_ld __attribute__((__aligned__(__alignof__(long double))));
-# 426 "/usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h" 3 4
-} max_align_t;
-# 24 "/usr/include/malloc.h" 2 3 4
-# 35 "/usr/include/malloc.h" 3 4
-
-
-
-extern void *malloc (size_t __size) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__malloc__))
-     __attribute__ ((__alloc_size__ (1))) ;
-
-
-extern void *calloc (size_t __nmemb, size_t __size)
-__attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__malloc__)) __attribute__ ((__alloc_size__ (1, 2))) ;
-
-
-
-
-
-
-extern void *realloc (void *__ptr, size_t __size)
-__attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__warn_unused_result__)) __attribute__ ((__alloc_size__ (2)));
-
-
-
-
-
-
-extern void *reallocarray (void *__ptr, size_t __nmemb, size_t __size)
-__attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__warn_unused_result__)) __attribute__ ((__alloc_size__ (2, 3)));
-
-
-extern void free (void *__ptr) __attribute__ ((__nothrow__ , __leaf__));
-
-
-extern void *memalign (size_t __alignment, size_t __size)
-__attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__malloc__)) __attribute__ ((__alloc_size__ (2))) ;
-
-
-extern void *valloc (size_t __size) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__malloc__))
-     __attribute__ ((__alloc_size__ (1))) ;
-
-
-
-extern void *pvalloc (size_t __size) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__malloc__)) ;
-
-
-
-extern void *(*__morecore) (ptrdiff_t __size);
-
-
-extern void *__default_morecore (ptrdiff_t __size)
-__attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__malloc__));
-
-
-
-struct mallinfo
+# 2 "../../../static__libararies/src/my_math.c" 2
+int add(const int a, const int b)
 {
-  int arena;
-  int ordblks;
-  int smblks;
-  int hblks;
-  int hblkhd;
-  int usmblks;
-  int fsmblks;
-  int uordblks;
-  int fordblks;
-  int keepcost;
+    return (a + b);
 };
-
-
-extern struct mallinfo mallinfo (void) __attribute__ ((__nothrow__ , __leaf__));
-# 128 "/usr/include/malloc.h" 3 4
-extern int mallopt (int __param, int __val) __attribute__ ((__nothrow__ , __leaf__));
-
-
-
-extern int malloc_trim (size_t __pad) __attribute__ ((__nothrow__ , __leaf__));
-
-
-
-extern size_t malloc_usable_size (void *__ptr) __attribute__ ((__nothrow__ , __leaf__));
-
-
-extern void malloc_stats (void) __attribute__ ((__nothrow__ , __leaf__));
-
-
-extern int malloc_info (int __options, FILE *__fp) __attribute__ ((__nothrow__ , __leaf__));
-
-
-extern void (*volatile __free_hook) (void *__ptr,
-                                                   const void *)
-__attribute__ ((__deprecated__));
-extern void *(*volatile __malloc_hook)(size_t __size,
-                                                     const void *)
-__attribute__ ((__deprecated__));
-extern void *(*volatile __realloc_hook)(void *__ptr,
-                                                      size_t __size,
-                                                      const void *)
-__attribute__ ((__deprecated__));
-extern void *(*volatile __memalign_hook)(size_t __alignment,
-                                                       size_t __size,
-                                                       const void *)
-__attribute__ ((__deprecated__));
-extern void (*volatile __after_morecore_hook) (void);
-
-
-
-# 4 "main.c" 2
-
-
-# 5 "main.c"
-int main(void)
+int sub(const int a, const int b)
 {
-    int x;
-    int (*action)(const int, const int) = 
-# 8 "main.c" 3 4
-                                         ((void *)0)
-# 8 "main.c"
-                                             ;
-    action = add;
-    x = action(5, 5);
-    printf("%d\n", x);
-    action = sub;
-    x = action(5, 5);
-    printf("%d\n", x);
-    action = multi;
-    x = action(5, 5);
-    printf("%d\n", x);
-    action = div;
-    x = action(5, 5);
-    printf("%d\n", x);
-    return 0;
-}
+    return (a - b);
+};
+int div(const int a, const int b)
+{
+    return (a / b);
+};
+int multi(const int a, const int b)
+{
+    return (a * b);
+};

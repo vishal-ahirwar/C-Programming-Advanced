@@ -1,21 +1,7 @@
-#include <stdio.h>
+#include "../../../static__libararies/src/my_math.h"
+
 #include <malloc.h>
-int add(const int a, const int b)
-{
-    return (a + b);
-};
-int sub(const int a, const int b)
-{
-    return (a - b);
-};
-int div(const int a, const int b)
-{
-    return (a / b);
-};
-int multi(const int a, const int b)
-{
-    return (a * b);
-};
+
 int main(void)
 {
     int x;
